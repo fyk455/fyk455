@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>状态栏示例</title>
+  <style>
+    .progress-bar {
+      width: 100%;
+      background-color: #ddd;
+      height: 25px;
+      border-radius: 4px;
+    }
+    
+    .progress-bar-inner {
+      height: 100%;
+      width: 0;
+      background-color: #4caf50;
+      border-radius: 4px;
+      transition: width 0.5s;
+    }
+  </style>
+</head>
+<body>
+  <h1>状态栏示例</h1>
+  
+  <div class="progress-bar">
+    <div id="progress" class="progress-bar-inner"></div>
+  </div>
+  
+  <script>
+    setTimeout(function() {
+      var progressBar = document.getElementById('progress');
+      progressBar.style.width = '50%';
+    }, 2000);
+  </script>
+</body>
+</html>
